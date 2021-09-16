@@ -10,7 +10,6 @@ echo "=========================="
 echo "Installing OpenMPI to $isntall_dir"
 echo "=========================="
 
-#install OpenMPI, a dependency necessary for HPL to perform node communication
 cd "$install_dir"
 sudo mkdir src openmpi
 cd src
