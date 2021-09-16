@@ -27,24 +27,24 @@ set -e # exit when any error occurs
 # Install dependencies
 
 install_dir="$home"
+script_dir="$(pwd)"
 
 echo "=========================="
 echo "Installing HPL to $home"
 echo "=========================="
 
 cd "$home"
-sudo wget https://www.netlib.org/benchmark/hpl/hpl-2.3.tar.gz
-sudo tar -xvzf hpl-2.3.tar.gz
-sudo rm hpl-2.3.tar.gz
+wget https://www.netlib.org/benchmark/hpl/hpl-2.3.tar.gz
+tar -xvzf hpl-2.3.tar.gz
+rm hpl-2.3.tar.gz
 cd hpl-2.3
 
-cp ./Make.rpi "$home/hpl-2.3/."
+# Copy the HPL configuration make file
+cp "$script_dir/Make.rpi" "$install_dir/hpl-2.3/."
 
-cd "$home/hpl-2.3"
+cd "$install_dir/hpl-2.3"
 
 make arch=rpi
-
-# Copy the
 
 if [ -z "$(ls -A bin/rpi)" ]; then
     echo "HPL did not install correctly, directory $(pwd)/bin/rpi is empty."
