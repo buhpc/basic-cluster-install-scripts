@@ -7,11 +7,11 @@ sudo apt-get install gfortran
 install_dir="/usr/local"
 
 echo "=========================="
-echo "Installing OpenMPI to $isntall_dir"
+echo "Installing OpenMPI to $install_dir"
 echo "=========================="
 
 cd "$install_dir"
-sudo mkdir src openmpi
+sudo mkdir -p openmpi
 cd src
 sudo wget https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.1.tar.gz
 sudo tar -xvzf openmpi-4.1.1.tar.gz
