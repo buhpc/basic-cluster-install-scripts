@@ -11,3 +11,6 @@ sudo apt-get install build-essential g++ -y
 
 # Install git
 sudo apt-get install git -y
+
+# Install ntpdate to periodically sync the time
+sudo apt-get install ntpdate -y
