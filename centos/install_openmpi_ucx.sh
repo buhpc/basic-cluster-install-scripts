@@ -1,7 +1,7 @@
 #!/bin/bash
-
-# Use this file when OpenMPI needs to be built with UCX support. Requires you to first run install_openucx.sh.
 set -e # exit when any error occurs
+
+# Use this file when OpenMPI needs to be built with UCX support. Requires install_openucx.sh to first be run. Originally needed for Oracle Cloud Cluster in the SC21 Student Cluster Competition.
 
 # Install dependencies
 sudo yum install gcc-gfortran -y
