@@ -11,7 +11,7 @@ echo "Installing OpenMPI to $install_dir"
 echo "=========================="
 
 cd "$install_dir"
-sudo mkdir -p openmpi
+sudo mkdir -p openmpi src
 cd src
 sudo wget https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.1.tar.gz
 sudo tar -xvzf openmpi-4.1.1.tar.gz
