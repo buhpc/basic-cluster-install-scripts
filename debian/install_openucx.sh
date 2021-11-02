@@ -17,10 +17,12 @@ sudo tar -xvzf ucx-1.11.2.tar.gz
 sudo rm ucx-1.11.2.tar.gz
 cd ucx-1.11.2
 
+sudo ./configure --prefix="$install_dir/openucx-installation"
+
 # Change to 'sudo make -j{cores}' to build in parallel
 sudo make -j4
 
-sudo make PREFIX="$install_dir/openucx-installation" install
+sudo make install
 
 if [ -z "$(ls -A ../../openucx-installation/bin)" ]; then
     echo "OpenUCX did not install correctly, directory $install_dir/openucx-installation/bin is empty."
