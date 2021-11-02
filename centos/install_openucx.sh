@@ -1,7 +1,7 @@
 #!/bin/bash
-set -e # exit when any error occurs
 
-# Install dependencies
+# OpenUCX is a communication framework that sits on top of RoCE. Originally needed for the Oracle Cloud Cluster in the SC21 Student Cluster Competition.
+set -e # exit when any error occurs
 
 install_dir="/usr/local"
 
