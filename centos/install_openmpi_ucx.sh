@@ -19,7 +19,7 @@ sudo wget https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.1.tar.
 sudo tar -xvzf openmpi-4.1.1.tar.gz
 sudo rm openmpi-4.1.1.tar.gz
 cd openmpi-4.1.1
-sudo ./configure --prefix="$install_dir/openmpi-installation" --with-ucx="$install_dir/ucx-installation" --enable-mca-no-build=btl-uct
+sudo ./configure --prefix="$install_dir/openmpi-installation" --with-ucx="$install_dir/openucx-installation" --enable-mca-no-build=btl-uct
 
 # Change to 'make all install -j{cores}' to build in parallel
 sudo make all install -j16
