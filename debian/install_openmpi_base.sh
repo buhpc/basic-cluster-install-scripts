@@ -22,7 +22,7 @@ sudo ./configure --prefix=${install_dir}/openmpi-installation
 sudo make all install -j4
 
 if [ -z "$(ls -A ../../openmpi-installation/bin)" ]; then
-    echo "MPI did not install correctly, directory ${install_dir}/openmpi-installation is empty."
+    echo "MPI did not install correctly, directory ${install_dir}/openmpi-installation/bin is empty."
     exit 1
 else
    echo "========================"
