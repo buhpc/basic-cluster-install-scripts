@@ -2,7 +2,7 @@
 set -e # exit when any error occurs
 
 # Install dependencies
-sudo apt-get install gfortran
+sudo apt-get install gfortran -y
 
 install_dir="/usr/local"
 
