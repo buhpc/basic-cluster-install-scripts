@@ -18,9 +18,11 @@ sudo tar -xvzf openmpi-4.1.1.tar.gz
 sudo rm openmpi-4.1.1.tar.gz
 cd openmpi-4.1.1
 sudo ./configure --prefix=${install_dir}/openmpi-installation
+
 # Change to 'make all install -j{cores}' to build in parallel
 sudo make all install -j4
 
+# A correct installation of OpenMPI will contain executables in the bin directory.
 if [ -z "$(ls -A ../../openmpi-installation/bin)" ]; then
     echo "MPI did not install correctly, directory ${install_dir}/openmpi-installation/bin is empty."
     exit 1
