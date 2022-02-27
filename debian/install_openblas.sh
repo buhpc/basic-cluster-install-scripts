@@ -1,5 +1,7 @@
 #!/bin/bash
+
 set -e # exit when any error occurs
+set -o xtrace # display command as it is run
 
 # Install dependencies
 
