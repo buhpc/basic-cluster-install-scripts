@@ -22,7 +22,7 @@ sudo make -j4
 
 sudo make PREFIX="$install_dir/openblas-installation" install
 
-if [ -z "$(ls -A ../../openblas-installation)" ]; then
+if [ -z "$(ls -A ../../openblas-installation/lib)" ]; then
     echo "OpenBLAS did not install correctly, directory $install_dir/openblas-installation is empty."
     exit 1
 else
