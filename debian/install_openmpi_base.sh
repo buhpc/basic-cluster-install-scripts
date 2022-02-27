@@ -21,7 +21,7 @@ sudo ./configure --prefix=${install_dir}/openmpi-installation
 # Change to 'make all install -j{cores}' to build in parallel
 sudo make all install -j4
 
-if [ -z "$(ls -A ../../openmpi-installation)" ]; then
+if [ -z "$(ls -A ../../openmpi-installation/bin)" ]; then
     echo "MPI did not install correctly, directory ${install_dir}/openmpi-installation is empty."
     exit 1
 else
