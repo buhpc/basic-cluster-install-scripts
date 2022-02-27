@@ -27,7 +27,7 @@ if [ -z "$(ls -A ../../openblas-installation/lib)" ]; then
     echo "OpenBLAS did not install correctly, directory $install_dir/openblas-installation/lib is empty."
     exit 1
 else
-   echo "============================="
-   echo "OpenBLAS installed correctly."
-   echo "============================="
+    echo "============================="
+    echo "OpenBLAS installed correctly."
+    echo "============================="
 fi
