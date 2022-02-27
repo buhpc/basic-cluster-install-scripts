@@ -28,10 +28,10 @@ if [ -z "$(ls -A ../../openmpi-installation/bin)" ]; then
     exit 1
 else
    echo "========================"
-   echo "MPI installed correctly. Make sure to add the line"
+   echo "MPI installed correctly. Make sure to add the following lines"
    echo "export PATH=\"\$PATH:/usr/local/openmpi-installation/bin\""
    echo "export LD_LIBRARY_PATH=\"\$LD_LIBRARY_PATH:/usr/local/openmpi-installation/lib\""
-   echo "to each user's .bashrc"
+   echo "to the user's .bashrc"
    echo "========================"
    echo ""
    echo "========================"
