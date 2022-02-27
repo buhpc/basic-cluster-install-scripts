@@ -10,7 +10,7 @@ echo "Installing OpenBLAS to $install_dir"
 echo "=========================="
 
 cd "$install_dir"
-sudo mkdir -p openblas
+sudo mkdir -p openblas-installation src
 cd src
 sudo wget https://github.com/xianyi/OpenBLAS/releases/download/v0.3.17/OpenBLAS-0.3.17.tar.gz
 sudo tar -xvzf OpenBLAS-0.3.17.tar.gz
@@ -20,10 +20,10 @@ cd OpenBLAS-0.3.17
 # Change to 'sudo make -j{cores}' to build in parallel
 sudo make -j4
 
-sudo make PREFIX="$install_dir/openblas" install
+sudo make PREFIX="$install_dir/openblas-installation" install
 
-if [ -z "$(ls -A ../../openblas)" ]; then
-    echo "OpenBLAS did not install correctly, directory $install_dir/openblas is empty."
+if [ -z "$(ls -A ../../openblas-installation)" ]; then
+    echo "OpenBLAS did not install correctly, directory $install_dir/openblas-installation is empty."
     exit 1
 else
    echo "============================="
