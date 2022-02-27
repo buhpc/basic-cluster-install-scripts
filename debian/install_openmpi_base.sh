@@ -30,6 +30,7 @@ else
    echo "========================"
    echo "MPI installed correctly. Make sure to add the line"
    echo "export PATH=\"\$PATH:/usr/local/openmpi-installation/bin\""
+   echo "export LD_LIBRARY_PATH=\"\$LD_LIBRARY_PATH:/usr/local/openmpi-installation/lib\""
    echo "to each user's .bashrc"
    echo "========================"
    echo ""
