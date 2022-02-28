@@ -21,7 +21,8 @@ cd openmpi-4.1.1
 sudo ./configure --prefix=${install_dir}/openmpi-installation
 
 # Change to 'make all install -j{cores}' to build in parallel
-sudo make all install
+sudo make -j4 all 
+sudo make install
 
 # A correct installation of OpenMPI will contain executables in the bin directory.
 DIR="${install_dir}/openmpi-installation/bin"
