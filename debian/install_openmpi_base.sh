@@ -11,7 +11,7 @@ echo "=========================="
 echo "Installing OpenMPI to ${install_dir}"
 echo "=========================="
 
-cd "${install_dir}"
+cd ${install_dir}
 sudo mkdir -p openmpi-installation src
 cd src
 sudo wget https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.1.tar.gz
@@ -24,8 +24,9 @@ sudo ./configure --prefix=${install_dir}/openmpi-installation
 sudo make all install -j4
 
 # A correct installation of OpenMPI will contain executables in the bin directory.
-if [ -z "$(ls -A ../../openmpi-installation/bin)" ]; then
-    echo "MPI did not install correctly, directory ${install_dir}/openmpi-installation/bin is empty."
+DIR="${install_dir}/openmpi-installation/bin"
+if [ -d "$DIR" ]; then
+    echo "MPI did not install correctly, directory ${install_dir}/openmpi-installation/bin does not exist."
     exit 1
 else
     echo "========================"
