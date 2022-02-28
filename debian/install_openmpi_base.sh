@@ -21,23 +21,23 @@ cd openmpi-4.1.1
 sudo ./configure --prefix=${install_dir}/openmpi-installation
 
 # Change to 'make all install -j{cores}' to build in parallel
-sudo make all install -j4
+sudo make all install
 
 # A correct installation of OpenMPI will contain executables in the bin directory.
 DIR="${install_dir}/openmpi-installation/bin"
 if [ -d "$DIR" ]; then
-    echo "============================================================================="
+    echo "========================================================================="
     echo "MPI installed correctly. Make sure to add the following lines"
     echo ""
     echo "export PATH=\"\$PATH:/usr/local/openmpi-installation/bin\""
     echo "export LD_LIBRARY_PATH=\"\$LD_LIBRARY_PATH:/usr/local/openmpi-installation/lib\""
     echo ""
     echo "to the user's .bashrc"
-    echo "============================================================================="
+    echo "========================================================================="
     echo ""
-    echo "============================================================================="
+    echo "========================================================================="
     echo "Look at the README for instructions on running mpiexec/mpirun commands."
-    echo "============================================================================="
+    echo "========================================================================="
 else
     echo "================================================================="
     echo "MPI did not install correctly."
