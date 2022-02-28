@@ -38,7 +38,6 @@ if [ -d "$DIR" ]; then
     echo "============================================================================="
     echo "Look at the README for instructions on running mpiexec/mpirun commands."
     echo "============================================================================="
-    
 else
     echo "================================================================="
     echo "MPI did not install correctly.
