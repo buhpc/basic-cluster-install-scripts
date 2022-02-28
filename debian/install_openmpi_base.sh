@@ -26,17 +26,22 @@ sudo make all install -j4
 # A correct installation of OpenMPI will contain executables in the bin directory.
 DIR="${install_dir}/openmpi-installation/bin"
 if [ -d "$DIR" ]; then
-    echo "MPI did not install correctly, directory ${install_dir}/openmpi-installation/bin does not exist."
-    exit 1
-else
-    echo "========================"
+    echo "============================================================================="
     echo "MPI installed correctly. Make sure to add the following lines"
+    echo ""
     echo "export PATH=\"\$PATH:/usr/local/openmpi-installation/bin\""
     echo "export LD_LIBRARY_PATH=\"\$LD_LIBRARY_PATH:/usr/local/openmpi-installation/lib\""
-    echo "to the user's .bashrc"
-    echo "========================"
     echo ""
-    echo "========================"
+    echo "to the user's .bashrc"
+    echo "============================================================================="
+    echo ""
+    echo "============================================================================="
     echo "Look at the README for instructions on running mpiexec/mpirun commands."
-    echo "========================"
+    echo "============================================================================="
+    
+else
+    echo "================================================================="
+    echo "MPI did not install correctly.
+    exho "Directory ${install_dir}/openmpi-installation/bin does not exist."
+    echo "================================================================="
 fi
