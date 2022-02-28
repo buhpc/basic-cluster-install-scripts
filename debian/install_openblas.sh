@@ -21,14 +21,16 @@ cd OpenBLAS-0.3.17
 # Change to 'sudo make -j{cores}' to build in parallel
 sudo make -j4
 
-sudo make PREFIX="$install_dir/openblas-installation" install
+sudo make PREFIX="${install_dir}/openblas-installation" install
 
-# A correct installation of OpenBLAS will contain files in the lib directory
-if [ -z "$(ls -A ../../openblas-installation/lib)" ]; then
-    echo "OpenBLAS did not install correctly, directory $install_dir/openblas-installation/lib is empty."
-    exit 1
-else
+# A correct installation of OpenBLAS will contain the lib directory
+DIR="${install_dir}/openblas-installation/lib"
+if [ -d "$DIR" ]; then
     echo "============================="
     echo "OpenBLAS installed correctly."
     echo "============================="
+else
+    echo "========================================================="
+    echo "OpenBLAS did not install correctly, ${DIR} does not exist"
+    echo "========================================================="
 fi
