@@ -41,6 +41,6 @@ if [ -d "$DIR" ]; then
 else
     echo "================================================================="
     echo "MPI did not install correctly."
-    exho "Directory ${install_dir}/openmpi-installation/bin does not exist."
+    echo "Directory ${install_dir}/openmpi-installation/bin does not exist."
     echo "================================================================="
 fi
