@@ -22,3 +22,4 @@ These scripts are meant to build on each other, so it is critical to read any er
 ## DEPENDENCIES
 Some scripts here require other scripts to be run first. They are as follows:
  - ```install_openmpi_ucx.sh``` <- ```install_openucx.sh```
+ - ```all others``` <- ```install_basic_packages.sh```
