@@ -1,4 +1,4 @@
-# Basic_Cluster_Setup
+# Basic Cluster Setup
 This repository contains a set of scripts to perform installation of basic HPC packages and dependencies for a cluster. They are meant to be run individually as needed after a cluster has been fully networked.
 
 The following distributions are supported
